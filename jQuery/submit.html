@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="">아이디</label>
+        <input type="text" name="userid" id="userid" />
+      </div>
+      <button class="button" id="modify">수정</button>
+      <button class="button" id="remove">삭제</button>
+      <button class="button" id="read">조회</button>
+    </form>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    let form = $("form");
+    $("#modify").click(function() {
+      form.attr("action", "radio.html");
+      $("#userid").remove(); //빼고 보내겠다 주소창에서 안보임
+      form.submit();
+    });
+    $("#remove").click(function() {
+      form.attr("action", "checkbox.html");
+      form.append("<input type='hidden' name='no' value='3'>"); //아무런 데이터가 가지 않아도 추가해서 보여짐
+      form.submit();
+    });
+    $("#read").click(function() {
+      form.empty(); //주소창에서 아무것도 안보이게끔
+      form.attr("action", "mouseover.html");
+      form.submit();
+    });
+  </script>
+</html>

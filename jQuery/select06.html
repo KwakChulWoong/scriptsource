@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <input type="password" name="" id="" />
+    <input type="radio" name="" id="" />
+    <input type="file" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $("[type='text']").val("Hello jQuery"); //속성 선택자
+      $("[type='checkbox']").attr("checked", "checked"); //.attr 속성 attribute 값 부여해줌
+      $("[type='checkbox']").attr("name", "apple");
+      $(":checkbox").attr("id", "apple");
+    </script>
+  </body>
+</html>
